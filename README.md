@@ -31,3 +31,22 @@ Opening `index.html` straight from disk works too, but a server matches producti
   show an identical mark. Rounding comes from CSS, not from the file.
 - Deployment: GitHub Pages, branch `main`, folder `/ (root)`. The `CNAME` file
   holds the custom domain, so keep it in the repository.
+
+## Regenerating the social preview
+
+`assets/og.jpg` is generated, not hand-drawn. If the headline, the 3/1/1 figures
+or the game artwork change, rebuild it so the preview does not drift from the
+site:
+
+```
+pip install pillow
+python tools/generate-og.py
+```
+
+The script mirrors `styles.css` - same Barlow Condensed weights, letter-spacing
+and line-height - and picks the largest headline size that still clears the
+artwork. Fonts download once into `tools/.fonts/` (git-ignored). Copy lives in
+the constants at the top of the file.
+
+This is a maintenance tool, not a build step: the site itself still ships as
+plain static files and needs nothing installed to deploy.
