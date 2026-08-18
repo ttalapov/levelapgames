@@ -75,10 +75,14 @@ p { margin: 0; }
 .site-header nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 30px;
   margin-left: auto;
   color: #cacbc6;
-  font-size: 13px;
+  /* тот же гротеск, что у кнопки и мобильного меню — шапка набрана одним шрифтом.
+     Кегль и трекинг как у .text-link — единый стиль текстовой ссылки на сайте. */
+  font: 700 15px/1 var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 .site-header nav a,
 .text-link,
@@ -420,7 +424,7 @@ footer strong { color: #ecece7; }
   color: #cacbc6;
   font: 700 19px/1 var(--display);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   transition: color 160ms ease;
 }
 .mobile-nav a + a { border-top: 1px solid rgba(255, 255, 255, 0.08); }
