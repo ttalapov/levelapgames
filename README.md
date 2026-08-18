@@ -25,6 +25,9 @@ Opening `index.html` straight from disk works too, but a server matches producti
 
 - Social preview is `assets/og.jpg` (1200x631). Open Graph tags use absolute
   URLs, which link scrapers require - keep them absolute if the domain changes.
-- The favicon set is generated from `assets/banana-yellow.jpg`.
+- `assets/banana-yellow.jpg` is the source art for the brand mark. Both the
+  favicon set and the header logo (`assets/logo-banana.png`) are generated
+  from it with the same 88% centre crop, so the tab icon and the header
+  show an identical mark. Rounding comes from CSS, not from the file.
 - Deployment: GitHub Pages, branch `main`, folder `/ (root)`. The `CNAME` file
   holds the custom domain, so keep it in the repository.
