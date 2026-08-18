@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://levelapgames.pp.ua/sitemap.xml
